@@ -37,7 +37,7 @@ function debounce(callback, interval) {
   return (...args) => {
     clearTimeout(timer);
     timer = setTimeout(() => {
-      callback.apply(this, args);
+      callback(...args)
     }, interval);
   };
 }
